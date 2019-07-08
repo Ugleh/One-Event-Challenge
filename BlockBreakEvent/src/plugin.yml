@@ -1,0 +1,14 @@
+name: BlockBreakEventExample
+description: In this Example we create a plugin that allows players the ability to mine/dig/break blocks and have the drops instantly go into their inventory if space is provided.
+version: 0.1
+author: Ugleh
+main: com.ugleh.eventexamples.blockbreakevent.BlockBreakEventExample
+api-version: 1.13
+permissions:
+  bbee.*:
+    description: Admin permission to use all perms of BBEE.
+    children:
+      bbee.use: true
+  bbee.use:
+    description: The ability to use BBEE's ability.
+    default: true
