@@ -1,0 +1,14 @@
+name: BlockPlaceEventExample
+description: Nothing yet
+version: 0.1
+author: Ugleh
+main: com.ugleh.eventexamples.blockplaceevent.BlockPlaceEventExample
+api-version: 1.13
+permissions:
+  bpee.*:
+    description: Admin permission to use all perms of BBEE.
+    children:
+      bbee.use: true
+  bpee.use:
+    description: The ability to use BBEE's ability.
+    default: true
