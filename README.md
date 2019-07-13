@@ -4,7 +4,7 @@ This repo is a collection of Bukkit event examples as of 1.14.3 of Spigot. The c
 
 **org.bukkit.event.block**
 - [BlockBreakEvent](https://github.com/Ugleh/One-Event-Challenge/tree/master/BlockBreakEvent "BlockBreakEvent")
-- BlockBurnEvent
+- [BlockBurnEvent](https://github.com/Ugleh/One-Event-Challenge/tree/master/BlockBurnEvent "BlockBurnEvent")
 - BlockCanBuildEvent
 - BlockCookEvent
 - BlockDamageEvent
