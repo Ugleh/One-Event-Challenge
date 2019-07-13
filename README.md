@@ -1,10 +1,37 @@
-#### Description
-> **Event:** BlockPlaceEvent  
-> **Package:** org.bukkit.event.block.BlockPlaceEvent  
-> **Plugin Type/Title:** Created a recipe/block for Instantly Primed TNT when placed  
-> **Notes:** When plugins utialize BlockPlaceEvent it is usually for storing blocks into a collection for use in other events. I had to think of a plugin idea that would embody the challenge as a whole and try to not rely on Runnables or other stuff like commands, 
+### **ONE EVENT CHALLENGE**
 
-#### Tutorial/challenge Video Info
+This repo is a collection of Bukkit event examples as of 1.14.3 of Spigot. The challenge is to make a reasonable plugin using only 1 event. Currently I am starting with the Block events below. Linked bullets are the ones finished.
 
-> **Title:** (tbd)  
-> **Link:** (tbd)  
+**org.bukkit.event.block**
+- [BlockBreakEvent](https://github.com/Ugleh/One-Event-Challenge/tree/master/BlockBreakEvent "BlockBreakEvent")
+- BlockBurnEvent
+- BlockCanBuildEvent
+- BlockCookEvent
+- BlockDamageEvent
+- BlockDispenseArmorEvent
+- BlockDispenseEvent
+- BlockExpEvent
+- BlockExplodeEvent
+- BlockFadeEvent
+- BlockFertilizeEvent
+- BlockFormEvent
+- BlockFromToEvent
+- BlockGrowEvent
+- BlockIgniteEvent
+- BlockMultiPlaceEvent
+- BlockPhysicsEvent
+- BlockPistonEvent
+- BlockPistonExtendEvent
+- BlockPistonRetractEvent
+- [BlockPlaceEvent](https://github.com/Ugleh/One-Event-Challenge/tree/master/BlockPlaceEvent "BlockPlaceEvent")
+- BlockRedstoneEvent
+- BlockShearEntityEvent
+- BlockSpreadEvent
+- CauldronLevelChangeEvent
+- EntityBlockFormEvent
+- FluidLevelChangeEvent
+- LeavesDecayEvent
+- MoistureChangeEvent
+- NotePlayEvent
+- SignChangeEvent
+- SpongeAbsorbEvent
