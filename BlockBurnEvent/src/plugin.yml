@@ -1,0 +1,6 @@
+name: BlockBurnEventExample
+description: In this example we implement new ways to get charcoal by burning wood objects.
+version: 0.1
+author: Ugleh
+main: com.ugleh.eventexamples.blockburnevent.BlockBurnEventExample
+api-version: 1.13
