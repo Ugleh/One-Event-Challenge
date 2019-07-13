@@ -5,38 +5,48 @@ import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.ShapedRecipe;
+import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BlockPlaceEventExample extends JavaPlugin {
-    ItemStack sheepSkinnerItem;
-    BlockPlaceEventExample instance;
+    public static BlockPlaceEventExample instance;
+    public static ItemStack primed_tnt;
 
     @Override
     public void onEnable() {
         instance = this;
+        createRecipes();
         getServer().getPluginManager().registerEvents(new BlockPlaceEventListener(), this);
-        createRecipe();
-    }
-    private void createRecipe() {
-        sheepSkinnerItem = new ItemStack(Material.REDSTONE_TORCH, 1);
-        ItemMeta ssMeta = sheepSkinnerItem.getItemMeta();
-        ssMeta.setDisplayName(ChatColor.GOLD + "Solar Powered Sheep Skinner");
-        sheepSkinnerItem.setItemMeta(ssMeta);
-
-        ShapedRecipe ssRecipe;
-        NamespacedKey key = new NamespacedKey(this, this.getDescription().getName());
-
-        ssRecipe = new ShapedRecipe(key, sheepSkinnerItem);
-        ssRecipe.shape("-D-", "-S-", "---");
-        ssRecipe.setIngredient('D', Material.DAYLIGHT_DETECTOR);
-        ssRecipe.setIngredient('S', Material.SHEARS);
-        this.getServer().addRecipe(ssRecipe);
     }
 
-    public BlockPlaceEventExample getInstance()
+    private void createRecipes() {
+        primed_tnt = new ItemStack(Material.TNT, 1);
+        ItemMeta itemMeta = primed_tnt.getItemMeta();
+        itemMeta.setDisplayName(ChatColor.RED + "PRIMED TNT");
+        
+        List<String> lore = new ArrayList();
+        lore.add(ChatColor.DARK_PURPLE + "Placing down this TNT block");
+        lore.add(ChatColor.DARK_PURPLE + "will instantly prime it.");
+        itemMeta.setLore(lore);
+
+        primed_tnt.setItemMeta(itemMeta);
+
+        NamespacedKey key = new NamespacedKey(this, "primed_tnt");
+        ShapelessRecipe recipe = new ShapelessRecipe(key, primed_tnt);
+        recipe.addIngredient(Material.TNT);
+        recipe.addIngredient(Material.REDSTONE);
+
+        getServer().addRecipe(recipe);
+
+    }
+
+
+    public static BlockPlaceEventExample getInstance()
     {
-        return this.instance;
+        return instance;
     }
 }

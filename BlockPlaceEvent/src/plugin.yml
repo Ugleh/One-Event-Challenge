@@ -1,5 +1,5 @@
 name: BlockPlaceEventExample
-description: Nothing yet
+description: In this example we create instantly primable TNT as a block/recipe.
 version: 0.1
 author: Ugleh
 main: com.ugleh.eventexamples.blockplaceevent.BlockPlaceEventExample
