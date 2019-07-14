@@ -27,7 +27,7 @@ public class BlockPlaceEventExample extends JavaPlugin {
         primed_tnt = new ItemStack(Material.TNT, 1);
         ItemMeta itemMeta = primed_tnt.getItemMeta();
         itemMeta.setDisplayName(ChatColor.RED + "PRIMED TNT");
-        
+
         List<String> lore = new ArrayList();
         lore.add(ChatColor.DARK_PURPLE + "Placing down this TNT block");
         lore.add(ChatColor.DARK_PURPLE + "will instantly prime it.");
