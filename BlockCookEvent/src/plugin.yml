@@ -1,0 +1,6 @@
+name: BlockCookEvent
+description: A random chance to smelt an extra piece of whatever the user is smelting.
+version: 0.1
+author: Ugleh
+main: com.ugleh.eventexamples.blockcookevent.BlockCookEventExample
+api-version: 1.13
